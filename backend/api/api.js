@@ -47,22 +47,23 @@ router.get('/testsql', async (request, response) => {
 let wordList = ['a','b','c'];
  
 router.post('/addWord', (request, response) => {
-    const { word } = request.body;
-    console.log(`Before: ${wordList}`)
+    let { word } = request.body;
+    word = word.toString().toLowerCase();
+   console.log(`Before: ${wordList}`)
   
 
     let didAdd = false;
 
     let j = 0;
-    while(j < wordList.length && wordList[j].toLowerCase != word.toLowerCase()){
+    while(j < wordList.length && wordList[j].toLowerCase() != word){
         j++;
     }
 
     if(j < wordList.length){
+        console.log("This word already exists!");
+    } else {
         wordList.push(word);
         didAdd = true;
-    } else {
-        console.log("This word already exists!");
     }
 
     console.log(`After: ${wordList}`)
@@ -76,12 +77,14 @@ router.post('/addWord', (request, response) => {
 
 });
 router.post('/removeWord', (request, response) => {
-    const { word } = request.body;
+    let { word } = request.body;
+    word = word.toString().toLowerCase();
+
 
     let didDelete = false;
 
     let j = 0;
-    while(j < wordList.length && wordList[j].toLowerCase() != word.toLowerCase()){
+    while(j < wordList.length && wordList[j].toLowerCase() != word){
         j++;
     }
 
