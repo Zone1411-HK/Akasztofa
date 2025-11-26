@@ -6,6 +6,7 @@ const fs = require('fs/promises');
 //!Multer
 const multer = require('multer'); //?npm install multer
 const path = require('path');
+const { request } = require('http');
 
 const storage = multer.diskStorage({
     destination: (request, file, callback) => {
@@ -40,5 +41,75 @@ router.get('/testsql', async (request, response) => {
         });
     }
 });
+
+//! ------------------------------------------------------------------- //
+
+let wordList = ['a','b','c'];
+ 
+router.post('/addWord', (request, response) => {
+    const { word } = request.body;
+    console.log(`Before: ${wordList}`)
+  
+
+    let didAdd = false;
+
+    let j = 0;
+    while(j < wordList.length && wordList[j].toLowerCase != word.toLowerCase()){
+        j++;
+    }
+
+    if(j < wordList.length){
+        wordList.push(word);
+        didAdd = true;
+    } else {
+        console.log("This word already exists!");
+    }
+
+    console.log(`After: ${wordList}`)
+
+
+    response.status(200).json({
+        message: "Success",
+        didAdd: didAdd,
+        newArray: wordList
+    });
+
+});
+router.post('/removeWord', (request, response) => {
+    const { word } = request.body;
+
+    let didDelete = false;
+
+    let j = 0;
+    while(j < wordList.length && wordList[j].toLowerCase() != word.toLowerCase()){
+        j++;
+    }
+
+    if(j < wordList.length){
+        wordList.splice(j, 1);
+        didDelete = true;
+    } 
+
+    response.status(200).json({
+        message: "Success",
+        didDelete: didDelete,
+        newArray: wordList
+    });
+});
+
+router.get('/randomWord', (request, response) => {
+    let rnd = Math.floor(Math.random() * wordList.length);
+    response.status(200).json({
+        message: "Success",
+        randomWord: wordList[rnd]
+    });
+});
+
+router.get('/listWords', (request, response) => {
+    response.status(200).json({
+        message: "Success",
+        wordList: wordList
+    }); 
+})
 
 module.exports = router;

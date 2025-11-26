@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Főoldal</title>
+        <!--!Bootstrap-->
+        <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css" />
+        <!--?Popper: dropdowns, popovers, tooltips-->
+        <script src="../bootstrap/js/popper.min.js"></script>
+        <script src="../bootstrap/js/bootstrap.min.js"></script>
+        <!--!CSS-->
+        <link rel="stylesheet" href="../css/index.css" />
+        <!--!JavaScript-->
+        <script src="../javascript/fetch.js"></script>
+        <script src="../javascript/szokezelo.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid mt-3" id="indexMainDiv">
+            <div class="row w-50">
+                <div class="col-6 d-flex justify-content-center">
+                    <div class="border border-secondary rounded-pill w-50 text-center"><a class="link-underline-light link-secondary" href="/jatek">Új Játék</a></div>
+                </div>
+                <div class="col-6 d-flex justify-content-center">
+                    <div class="border border-secondary rounded-pill w-50 text-center"><a class="link-underline-light link-secondary" href="/szokezelo">Szókezelő   </a></div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-6">
+                    <label for="wordInput">Szó: </label>
+                    <input type="text" id="wordInput">
+                </div>
+                <div class="col-3">
+                    <input type="button" value="Szó hozzáadása" id="addWord">
+                </div>
+                <div class="col-3">
+                    <input type="button" value="Szó eltávolítása" id="removeWord">
+                </div>
+            </div>
+            <div class="row mt-4 w-25">
+                <div class="col-6">
+                    <div class="centerContent" id="forWordList1"></div>
+                </div>
+                <div class="col-6">
+                    <div class="centerContent" id="forWordList2"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
