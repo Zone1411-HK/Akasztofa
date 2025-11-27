@@ -44,7 +44,7 @@ router.get('/testsql', async (request, response) => {
 
 //! ------------------------------------------------------------------- //
 
-let wordList = ['a','b','c'];
+let wordList = ['aa','bb','cc'];
  
 router.post('/addWord', (request, response) => {
     let { word } = request.body;

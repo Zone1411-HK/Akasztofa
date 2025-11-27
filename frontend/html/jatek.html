@@ -13,62 +13,59 @@
         <link rel="stylesheet" href="../css/index.css" />
         <!--!JavaScript-->
         <script src="../javascript/fetch.js"></script>
+        <script src="../javascript/jatek.js"></script>
     </head>
     <body>
         <div class="container-fluid" id="indexMainDiv">
-            <div class="row">
-                <div class="col-12 centerContent">
-                    <a class="link-offset-2 link-secondary" href="/jatek">Új Játék</a>
+            <div class="row w-50 mt-3">
+                <div class="col-6 d-flex justify-content-center">
+                    <div class="text-center"><a class="link-underline-light link-secondary" href="/szokezelo">Szókezelő</a></div>
                 </div>
-                <div class="col-12 centerContent">
-                    <a class="link-offset-2 link-secondary" href="szokezelo">Szókezelő</a>
-                </div>
-            </div>
-            <div class="row mt-5 pt-5">
-                <div class="col-12 display-5" id="livesDiv">
-                    <span id="lives">❤️❤️❤️❤️❤️</span>
+                <div class="col-6 d-flex justify-content-center">
+                    <div class="text-center"><a class="link-underline-light link-secondary" href="/">Főoldal   </a></div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <span id="length" class="display-6"></span>
+            <div class="row centerContent valamiRow">
+                <div class="col-6 display-5 centerContent" id="livesDiv">
+                    <span id="lives">.....</span>
                 </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-12 centerContent">
-                    <input type="button" class="btn btn-light border" value="Q">
-                    <input type="button" class="btn btn-light border" value="W">
-                    <input type="button" class="btn btn-light border" value="E">
-                    <input type="button" class="btn btn-light border" value="R">
-                    <input type="button" class="btn btn-light border" value="T">
-                    <input type="button" class="btn btn-light border" value="Y">
-                    <input type="button" class="btn btn-light border" value="U">
-                    <input type="button" class="btn btn-light border" value="I">
-                    <input type="button" class="btn btn-light border" value="O">
-                    <input type="button" class="btn btn-light border" value="P">
-                    <input type="button" class="btn btn-light border" value="Q">
-                </div>
-                <div class="col-12 centerContent">
-                    <input type="button" class="btn btn-light border" value="A">
-                    <input type="button" class="btn btn-light border" value="S">
-                    <input type="button" class="btn btn-light border" value="D">
-                    <input type="button" class="btn btn-light border" value="F">
-                    <input type="button" class="btn btn-light border" value="G">
-                    <input type="button" class="btn btn-light border" value="H">
-                    <input type="button" class="btn btn-light border" value="J">
-                    <input type="button" class="btn btn-light border" value="K">
-                    <input type="button" class="btn btn-light border" value="L">
-                </div>
-                <div class="col-12 centerContent">
-                    <input type="button" class="btn btn-light border" value="Z">
-                    <input type="button" class="btn btn-light border" value="X">
-                    <input type="button" class="btn btn-light border" value="C">
-                    <input type="button" class="btn btn-light border" value="V">
-                    <input type="button" class="btn btn-light border" value="B">
-                    <input type="button" class="btn btn-light border" value="N">
-                    <input type="button" class="btn btn-light border" value="M">
-                </div>
-                
+                <div class="col-6">
+                    <div class="row">
+                        <span id="wordSpan" class="display-6 centerContent"></span>
+                    </div>
+                    <div class="col-12 centerContent mb-2 gap-2">
+                        <input type="button" class="btn  border" value="Q">
+                        <input type="button" class="btn  border" value="W">
+                        <input type="button" class="btn  border" value="E">
+                        <input type="button" class="btn  border" value="R">
+                        <input type="button" class="btn  border" value="T">
+                        <input type="button" class="btn  border" value="Y">
+                        <input type="button" class="btn  border" value="U">
+                        <input type="button" class="btn  border" value="I">
+                        <input type="button" class="btn  border" value="O">
+                        <input type="button" class="btn  border" value="P">
+                    </div>
+                    <div class="col-12 centerContent mb-2 gap-2">
+                        <input type="button" class="btn  border" value="A">
+                        <input type="button" class="btn  border" value="S">
+                        <input type="button" class="btn  border" value="D">
+                        <input type="button" class="btn  border" value="F">
+                        <input type="button" class="btn  border" value="G">
+                        <input type="button" class="btn  border" value="H">
+                        <input type="button" class="btn  border" value="J">
+                        <input type="button" class="btn  border" value="K">
+                        <input type="button" class="btn  border" value="L">
+                    </div>
+                    <div class="col-12 centerContent gap-2">
+                        <input type="button" class="btn  border" value="Z">
+                        <input type="button" class="btn  border" value="X">
+                        <input type="button" class="btn  border" value="C">
+                        <input type="button" class="btn  border" value="V">
+                        <input type="button" class="btn  border" value="B">
+                        <input type="button" class="btn  border" value="N">
+                        <input type="button" class="btn  border" value="M">
+                    </div>
+                </div>                    
             </div>
         </div>
     </body>
